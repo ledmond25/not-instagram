@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'notig/home'
+
+  get 'notig/profile'
+
   get 'not_ig/home'
 
   get 'not_ig/profile'
