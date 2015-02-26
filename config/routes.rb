@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  root 'notig#home'
   get 'notig/home'
 
   get 'notig/profile'
