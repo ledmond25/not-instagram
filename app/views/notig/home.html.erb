@@ -1,2 +1,12 @@
 <h1>Notig#home</h1>
 <p>Find me in app/views/notig/home.html.erb</p>
+
+<% if user_signed_in? %>
+
+  <%= link_to "Sign out",destroy_user_session_path, method: :delete, class: "button" %>
+
+<% else %>
+
+  <%= link_to "Sign in",new_user_session_path %>
+
+<% end %>
