@@ -1,2 +1,27 @@
-<h1>Notig#home</h1>
-<p>Find me in app/views/notig/home.html.erb</p>
+<style>
+img {
+	width:200px;
+}
+body {
+    background-color: pink;
+}
+</style>
+<h1>Welcome to <u>Not</u> Instagram!</h1>
+
+<% if user_signed_in? %>
+Here are some of the pictures you can see: <br/>
+<%= image_tag("1.jpg") %>
+<%= image_tag("2.jpg") %> <br/>
+<%= image_tag("3.jpg") %>
+<%= image_tag("4.jpg") %> <br/>
+
+
+  <%= link_to "Sign out",destroy_user_session_path, method: :delete, class: "button" %>
+
+<% else %>
+
+  <%= link_to "Sign in",new_user_session_path %>
+
+<% end %>
+
+<p>copyright 2015 notinstagram.com</p>
